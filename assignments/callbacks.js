@@ -65,7 +65,10 @@ multiplyNums(4, 7, function(multiply){
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
-  if (item === list) {
+  // console.log(item)
+  // console.log(list)
+  
+  if (list.includes(item)) {
     return cb(true)
   }
   else {
@@ -73,7 +76,7 @@ function contains(item, list, cb) {
   }
 }
 
-  contains(items, 'pencil', function(pass){
+  contains('Pencil', items, function(pass){
     console.log(pass)
   })
 
