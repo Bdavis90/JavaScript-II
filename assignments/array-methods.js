@@ -63,14 +63,14 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
     //   runners.forEach(wholeName)
     let fullName = [];
 
-// let fName = runners.forEach(name => {
-//     fullName.push(name.first_name, name.last_name);
-// })
-// console.log(fullName);
-runners.forEach(function(name){
-    fullName.push(name.first_name, name.last_name)
+runners.forEach((name, index) => {
+    fullName.push(name.first_name + ' ' + name.last_name + ' ' + index);
 })
 console.log(fullName);
+// runners.forEach(function(name){
+//     fullName.push(name.first_name, name.last_name)
+// })
+// console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
@@ -90,9 +90,8 @@ let largeShirts = [];
 
 let shirts = runners.filter(size => size.shirt_size === 'L');
     largeShirts.push(shirts);
+    console.log(largeShirts)
 
-
-console.log(largeShirts);
 // runners.filter(function(size){
 //     if(size.shirt_size === 'L'){
 
