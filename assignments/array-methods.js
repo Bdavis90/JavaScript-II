@@ -63,14 +63,14 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
     //   runners.forEach(wholeName)
     let fullName = [];
 
-let fName = runners.forEach(name => {
-    fullName.push(name.first_name, name.last_name);
-})
-console.log(fullName);
-// runners.forEach(function(name){
-//     fullName.push(name.first_name, name.last_name)
+// let fName = runners.forEach(name => {
+//     fullName.push(name.first_name, name.last_name);
 // })
 // console.log(fullName);
+runners.forEach(function(name){
+    fullName.push(name.first_name, name.last_name)
+})
+console.log(fullName);
 
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
@@ -108,10 +108,10 @@ let ticketPriceTotal = [];
 let totalPrice = runners.reduce((total, donate) => total + donate.donation, 0);
 ticketPriceTotal.push(totalPrice);
 console.log(ticketPriceTotal);
-// runners.reduce((function(accumulamtor, currentValue){
-//     ticketPriceTotal.push(accuulator + currentValue)
-// }
- 
+// runners.reduce(function(total, donate){
+//     return total + donate.donation
+// },0)
+// ticketPriceTotal.push(runners.reduce)
 // console.log(ticketPriceTotal);
 
 // ==== Challenge 5: Be Creative ====
